@@ -443,6 +443,10 @@ section {
   color: #fff;
 }
 
+.resume .resume-item {
+  min-width: 100%;
+}
+
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
@@ -668,4 +672,5 @@ section {
 
 #footer .copyright {
   margin: 0 0 5px 0;
+  font-size: 0.75rem;
 }
