@@ -585,17 +585,18 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
+form button[type="submit"] {
   background: #ff8800;
   border: 0;
   padding: 10px 35px;
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
+  margin-top: 15px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
-  background: #ff8900;
+form button[type="submit"]:hover {
+  background: #542e02;
 }
 
 @-webkit-keyframes animate-loading {
