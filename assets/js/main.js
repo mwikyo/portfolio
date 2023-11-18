@@ -70,7 +70,7 @@
    */
   $('#myForm').on('submit', function(e) {
     $('#myForm *').fadeOut(2000);
-    $('#myForm').prepend('<div style="color: green;">Your submission has been submitted...</div>');
+    $('#myForm').prepend('<div style="color: green;">Your submission has been processed...</div>');
     
     });
 
