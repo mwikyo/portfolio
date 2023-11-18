@@ -66,6 +66,15 @@
   }
 
   /**
+   * Form Submission
+   */
+  $('#myForm').on('submit', function(e) {
+    $('#myForm *').fadeOut(2000);
+    $('#myForm').prepend('<div style="color: green;">Your submission has been submitted...</div>');
+    
+    });
+
+  /**
    * Back to top button
    */
   let backtotop = select('.back-to-top')
