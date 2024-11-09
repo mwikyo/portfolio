@@ -193,17 +193,35 @@
 
   const createBlogCards = (articles) => {
     const container = document.getElementById('blog-cards-container');
+    
+    // Ensure the container exists
+    if (!container) {
+      console.warn('Blog cards container not found!');
+      return;
+    }
+
     articles.forEach(article => {
+      // Skip if required article data is missing
+      if (!article.title || !article.description || !article.link) {
+        console.warn('Incomplete article data', article);
+        return;
+      }
+
+      // Create the card element
       const card = document.createElement('div');
       card.classList.add('col-lg-4', 'col-md-6', 'mb-4');
+
+      // Use template literals for cleaner HTML construction
       card.innerHTML = `
         <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="100">
           <div class="card-body">
             <h5 class="card-title">${article.title}</h5>
             <p class="card-text">${article.description}</p>
-            <a href="${article.link}" class="btn btn-primary" target="_blank">Read More</a>
+            <a href="${article.link}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Read More</a>
           </div>
         </div>`;
+
+      // Append the card to the container
       container.appendChild(card);
     });
   };
