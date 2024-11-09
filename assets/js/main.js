@@ -171,10 +171,10 @@
    */
   new PureCounter();
 
-})()
-
-document.addEventListener("DOMContentLoaded", function () {
-  const articles = [
+  /**
+   * Generate Blog Cards
+   */
+  const blogArticles = [
     {
       title: "Download Youtube Videos",
       description: "Download YouTube videos through the terminal using a bash script.",
@@ -182,35 +182,35 @@ document.addEventListener("DOMContentLoaded", function () {
       link: "https://medium.com/@mwikyo/download-youtube-videos-through-the-terminal-using-a-bash-script-205b21161339"
     },
     {
-      title: "Mastering Technical Support Skills",
-      description: "How to become efficient and skilled in technical support.",
-      image: "assets/img/blog/image2.jpg", // Replace with your image path
-      link: "https://medium.com/@mwikyo/mastering-technical-support-skills"
+      title: "Web Development Essentials",
+      description: "A guide to building scalable and efficient web applications.",
+      link: "https://medium.com/example2"
     },
     {
-      title: "Building Resilient Systems",
-      description: "Tips on creating systems with reliability in mind.",
-      image: "assets/img/blog/image3.jpg", // Replace with your image path
-      link: "https://medium.com/@mwikyo/building-resilient-systems"
+      title: "Technical Support in a Digital Age",
+      description: "Insights on modern technical support and customer service best practices.",
+      link: "https://medium.com/example3"
     }
   ];
 
-  const blogContainer = document.getElementById("blog-cards");
-
-  articles.forEach((article) => {
-    const cardHTML = `
-      <div class="col-lg-4 col-md-6">
-        <div class="card">
-          <img src="${article.image}" alt="${article.title}">
+  const createBlogCards = (articles) => {
+    const container = document.getElementById('blog-cards-container');
+    articles.forEach(article => {
+      const card = document.createElement('div');
+      card.classList.add('col-lg-4', 'col-md-6', 'mb-4');
+      card.innerHTML = `
+        <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="100">
           <div class="card-body">
             <h5 class="card-title">${article.title}</h5>
             <p class="card-text">${article.description}</p>
-            <a href="${article.link}" class="read-more" target="_blank">Read More</a>
+            <a href="${article.link}" class="btn btn-primary" target="_blank">Read More</a>
           </div>
-        </div>
-      </div>
-    `;
-    blogContainer.innerHTML += cardHTML;
-  });
-});
+        </div>`;
+      container.appendChild(card);
+    });
+  };
 
+  // Call the function to generate cards
+  createBlogCards(blogArticles);
+
+})();
