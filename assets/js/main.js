@@ -177,17 +177,17 @@
     {
       title: "Understanding Systems Reliability Engineering",
       description: "Exploring the principles of SRE, from monitoring to automation.",
-      link: "https://medium.com/example1"
+      link: "https://medium.com/@mwikyo/download-youtube-videos-through-the-terminal-using-a-bash-script-205b21161339"
     },
     {
       title: "Web Development Essentials",
       description: "A guide to building scalable and efficient web applications.",
-      link: "https://medium.com/example2"
+      link: "https://medium.com/@mwikyo/download-youtube-videos-through-the-terminal-using-a-bash-script-205b21161339"
     },
     {
       title: "Technical Support in a Digital Age",
       description: "Insights on modern technical support and customer service best practices.",
-      link: "https://medium.com/example3"
+      link: "https://medium.com/@mwikyo/download-youtube-videos-through-the-terminal-using-a-bash-script-205b21161339"
     }
   ];
 
