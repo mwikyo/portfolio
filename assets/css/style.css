@@ -281,7 +281,7 @@ h6 {
   height: 100vh;
   background: url('./assets/img/derrick.png') top right no-repeat;
   background-size: cover;
-  position: right;
+  position: relative; /* fix */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,12 +295,17 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+}
+
+#hero .container {
+  position: relative; /* ensures text appears above overlay */
+  z-index: 1;
 }
 
 #hero h1 {
@@ -356,6 +361,7 @@ h6 {
     line-height: 24px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
