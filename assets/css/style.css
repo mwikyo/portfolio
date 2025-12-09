@@ -372,7 +372,8 @@ h6 {
 }
 
 #hero .hero-description {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 500;
   color: var(--text-secondary);
   line-height: 1.8;
   max-width: 600px;
@@ -380,7 +381,8 @@ h6 {
 }
 
 #hero .hero-info {
-  font-size: 16px;
+  font-size: 19px;
+  font-weight: 500;
   color: var(--text-secondary);
   margin: 15px 0;
 }
@@ -390,7 +392,8 @@ h6 {
 }
 
 #hero .hero-note {
-  font-size: 16px;
+  font-size: 19px;
+  font-weight: 500;
   color: var(--text-secondary);
   font-style: italic;
   margin: 15px 0 50px 0;
@@ -548,10 +551,10 @@ section {
 
 .about .content p {
   color: var(--text-secondary);
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 25px;
   line-height: 1.8;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .about .content p:last-child {
